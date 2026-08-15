@@ -1,0 +1,89 @@
+# Three Variable Truth Table Simulator
+
+**Created by:** Krish Shah (Student No. 40519771)
+**Sincere Thanks to Mr. Will Aston, the module lecturer. This couldn't have been possible without you.**
+
+###### 
+
+## Introduction
+
+This project is an Object-Oriented C++ console application that generates a full truth table for a Boolean expression involving up to three variables (`A`, `B`, `C`). The user types in an expression such as `A AND B OR NOT C`, and the program parses it, evaluates every combination of inputs, prints a step-by-step intermediate table, explains each operator used, and optionally saves the result to a text file.
+
+## How to Run in VS Code (Windows)
+
+1. **Install prerequisites**
+
+   * Install [VS Code](https://code.visualstudio.com/).
+   * Install a C++ compiler toolchain — the easiest route on Windows is [MinGW-w64](https://www.mingw-w64.org/) (via MSYS2), then add its `bin` folder to your system `PATH`.
+   * Install the **C/C++** extension by Microsoft from the VS Code Extensions marketplace.
+2. **Set up the project**
+
+   * Create a folder (e.g. `TruthTableSimulator`) and place `main.cpp`, `BooleanOperator.h`, and `BooleanOperator.cpp` inside it.
+   * Open the folder in VS Code (`File > Open Folder`).
+3. **Compile and run**
+
+   * Open a terminal in VS Code (`Ctrl+``).
+   * Compile with:
+
+```
+     g++ main.cpp BooleanOperator.cpp -o TruthTable.exe
+     ```
+
+   \* Run with:
+
+```
+
+&#x20;    .\\\\TruthTable.exe
+     ```
+
+
+## Quick Example
+
+```
+\\\~ \\\~ \\\~ BOOLEAN TRUTH TABLE SIMULATOR \\\~ \\\~ \\\~
+Enter a 3 variable Boolean Expression : (A AND B) AND C
+
+Explanation of Operators used:
+- AND: True only if both inputs are true.
+| A | B | C | (A AND B) AND C |
+|---|---|---|-----------------|
+| 0 | 0 | 0 |        0        |
+| 0 | 0 | 1 |        0        |
+| 0 | 1 | 0 |        0        |
+| 0 | 1 | 1 |        0        |
+| 1 | 0 | 0 |        0        |
+| 1 | 0 | 1 |        0        |
+| 1 | 1 | 0 |        0        |
+| 1 | 1 | 1 |        1        |
+
+Would you like to save this Truth table to a file? (Y/N): Y
+Enter filename: result.txt
+Table saved successfully to result.txt
+```
+
+## OOP Principles in This Project
+
+**Abstraction**
+`BooleanOperator` is an abstract base class with pure virtual functions `evaluate()` and `explain()`. It defines *what* an operator must do without specifying *how*, hiding the implementation details behind a common interface.
+
+
+
+**Inheritance**
+Each operator — `AndOperator`, `OrOperator`, `NotOperator`, `XorOperator`, `NandOperator`, `NorOperator` — inherits from `BooleanOperator` and reuses its shared interface, avoiding repeated boilerplate for each logical operation.
+
+
+
+**Polymorphism**
+Because `evaluate()` and `explain()` are declared `virtual` in the base class, calling them on any derived operator object (e.g. `AndOperator().explain()`) executes the correct overridden version for that specific operator, allowing the same interface to produce different behaviour.
+
+
+
+**Encapsulation**
+`BooleanExpression` keeps its raw expression string (`exp`) `private`, exposing controlled access only through public methods like `getExpressionString()`, `evaluateRow()`, and `getIntermediates()`. Similarly, `TruthTable` encapsulates a `BooleanExpression` object as a private member, only exposing `displayTable()` and `saveToFile()` to the outside world.
+
+## 
+
+## Acknowledgements
+
+This project was built as coursework for the Object-Oriented Programming module, taught by **Mr. Will Aston**, whose lectures and guidance shaped the OOP design principles applied throughout this codebase.
+
