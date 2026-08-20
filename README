@@ -3,7 +3,7 @@
 Created by: Krish Shah
 Sincere Thanks to Mr. Will Aston, the module lecturer. This couldn't have been possible without you.
 
-###### 
+
 
 ## Introduction
 
@@ -11,7 +11,7 @@ This project is an Object-Oriented C++ console application that generates a full
 
 ## How to Run in VS Code (Windows)
 
-1. **Install prerequisites**
+1. Install prerequisites
 
    * Install [VS Code](https://code.visualstudio.com/).
    * Install a C++ compiler toolchain — the easiest route on Windows is [MinGW-w64](https://www.mingw-w64.org/) (via MSYS2), then add its `bin` folder to your system `PATH`.
