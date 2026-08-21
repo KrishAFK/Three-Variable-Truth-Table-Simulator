@@ -16,7 +16,7 @@ This project is an Object-Oriented C++ console application that generates a full
    * Install [VS Code](https://code.visualstudio.com/).
    * Install a C++ compiler toolchain — the easiest route on Windows is [MinGW-w64](https://www.mingw-w64.org/) (via MSYS2), then add its `bin` folder to your system `PATH`.
    * Install the **C/C++** extension by Microsoft from the VS Code Extensions marketplace.
-2. **Set up the project**
+2. Set up the project
 
    * Create a folder (e.g. `TruthTableSimulator`) and place `main.cpp`, `BooleanOperator.h`, and `BooleanOperator.cpp` inside it.
    * Open the folder in VS Code (`File > Open Folder`).
