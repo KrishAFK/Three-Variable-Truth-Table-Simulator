@@ -20,7 +20,7 @@ This project is an Object-Oriented C++ console application that generates a full
 
    * Create a folder (e.g. `TruthTableSimulator`) and place `main.cpp`, `BooleanOperator.h`, and `BooleanOperator.cpp` inside it.
    * Open the folder in VS Code (`File > Open Folder`).
-3. **Compile and run**
+3. Compile and run
 
    * Open a terminal in VS Code (`Ctrl+``).
    * Compile with:
