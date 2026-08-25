@@ -31,15 +31,12 @@ This project is an Object-Oriented C++ console application that generates a full
 
    \* Run with:
 
-```
-
-&#x20;    .\\\\TruthTable.exe
-     ```
+.\\\\TruthTable.exe
 
 
 ## Quick Example
 
-```
+
 \\\~ \\\~ \\\~ BOOLEAN TRUTH TABLE SIMULATOR \\\~ \\\~ \\\~
 Enter a 3 variable Boolean Expression : (A AND B) AND C
 
