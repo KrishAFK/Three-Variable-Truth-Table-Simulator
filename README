@@ -56,11 +56,11 @@ Explanation of Operators used:
 Would you like to save this Truth table to a file? (Y/N): Y
 Enter filename: result.txt
 Table saved successfully to result.txt
-```
+
 
 ## OOP Principles in This Project
 
-**Abstraction**
+Abstraction
 `BooleanOperator` is an abstract base class with pure virtual functions `evaluate()` and `explain()`. It defines *what* an operator must do without specifying *how*, hiding the implementation details behind a common interface.
 
 
