@@ -65,12 +65,12 @@ Abstraction
 
 
 
-**Inheritance**
+Inheritance
 Each operator — `AndOperator`, `OrOperator`, `NotOperator`, `XorOperator`, `NandOperator`, `NorOperator` — inherits from `BooleanOperator` and reuses its shared interface, avoiding repeated boilerplate for each logical operation.
 
 
 
-**Polymorphism**
+Polymorphism
 Because `evaluate()` and `explain()` are declared `virtual` in the base class, calling them on any derived operator object (e.g. `AndOperator().explain()`) executes the correct overridden version for that specific operator, allowing the same interface to produce different behaviour.
 
 
