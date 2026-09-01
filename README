@@ -78,7 +78,7 @@ Because `evaluate()` and `explain()` are declared `virtual` in the base class, c
 Encapsulation
 `BooleanExpression` keeps its raw expression string (`exp`) `private`, exposing controlled access only through public methods like `getExpressionString()`, `evaluateRow()`, and `getIntermediates()`. Similarly, `TruthTable` encapsulates a `BooleanExpression` object as a private member, only exposing `displayTable()` and `saveToFile()` to the outside world.
 
-## 
+
 
 ## Acknowledgements
 
